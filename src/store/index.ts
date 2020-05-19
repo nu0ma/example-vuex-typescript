@@ -1,11 +1,12 @@
-import Vue from "vue";
-import Vuex from "vuex";
+import Vue from 'vue';
+import Vuex from 'vuex';
+
+import { ICounterState } from './counter';
 
 Vue.use(Vuex);
 
-export default new Vuex.Store({
-  state: {},
-  mutations: {},
-  actions: {},
-  modules: {}
-});
+export type RootState = {
+  counter: ICounterState;
+};
+
+export default new Vuex.Store<RootState>({});
