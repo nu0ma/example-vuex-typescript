@@ -7,8 +7,8 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-import { counterModule } from '@/store/counter';
+import { Component, Vue } from "vue-property-decorator";
+import { counterModule } from "@/store/modules/counter";
 
 export default class Counter extends Vue {
   get getCounter() {
@@ -16,11 +16,11 @@ export default class Counter extends Vue {
   }
 
   increment() {
-    counterModule.incr();
+    counterModule.increment(1);
   }
 
   decrement() {
-    counterModule.decr();
+    counterModule.decrement(1);
   }
   // mouted() {
   //   console.log('mouted');

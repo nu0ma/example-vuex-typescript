@@ -6,7 +6,7 @@ import {
   getModule,
   Module,
 } from 'vuex-module-decorators';
-import store from './index';
+import store from '../index';
 
 export type ICounterState = {
   counter: number;
@@ -17,23 +17,23 @@ class Counter extends VuexModule implements ICounterState {
   counter = 0;
 
   @Mutation
-  increment(num: number) {
+  private INCREMENT(num: number) {
     this.counter += num;
   }
 
   @Mutation
-  decrement(num: number) {
+  private DECREMENT(num: number) {
     this.counter -= num;
   }
 
   @Action
-  incr() {
-    this.increment(1);
+  public increment(num: number) {
+    this.INCREMENT(num);
   }
 
   @Action
-  decr() {
-    this.decrement(1);
+  public decrement(num: number) {
+    this.DECREMENT(num);
   }
 }
 
