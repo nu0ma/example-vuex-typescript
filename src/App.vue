@@ -7,13 +7,18 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import Counter from './components/Counter.vue';
+import { employeeModule } from './store/modules/employee';
 
 @Component({
   components: {
     Counter,
   },
 })
-export default class App extends Vue {}
+export default class App extends Vue {
+  mounted() {
+    employeeModule.setEmployee();
+  }
+}
 </script>
 
 <style>
