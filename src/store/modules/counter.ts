@@ -8,12 +8,12 @@ import {
 } from 'vuex-module-decorators';
 import store from '../index';
 
-export type ICounterState = {
+export type CounterState = {
   counter: number;
 };
 
 @Module({ dynamic: true, store: store, name: 'counter', namespaced: true })
-class Counter extends VuexModule implements ICounterState {
+class Counter extends VuexModule implements CounterState {
   counter = 0;
 
   @Mutation
