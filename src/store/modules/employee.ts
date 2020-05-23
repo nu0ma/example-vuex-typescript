@@ -23,7 +23,7 @@ export type ApiResponse = {
   data: Employee[];
 };
 
-@Module({ dynamic: true, store: store, name: 'counter', namespaced: true })
+@Module({ dynamic: true, store: store, name: 'employee', namespaced: true })
 class Employee extends VuexModule implements ApiResponse {
   status!: string;
   data!: Employee[];

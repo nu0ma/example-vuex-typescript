@@ -7,7 +7,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Vue } from "vue-property-decorator";
 import { counterModule } from "@/store/modules/counter";
 
 export default class Counter extends Vue {

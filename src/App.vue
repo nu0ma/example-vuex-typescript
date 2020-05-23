@@ -5,14 +5,14 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-import Counter from './components/Counter.vue';
-import { employeeModule } from './store/modules/employee';
+import { Component, Vue } from "vue-property-decorator";
+import Counter from "./components/Counter.vue";
+import { employeeModule } from "./store/modules/employee";
 
 @Component({
   components: {
-    Counter,
-  },
+    Counter
+  }
 })
 export default class App extends Vue {
   mounted() {
